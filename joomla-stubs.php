@@ -1,30 +1,9 @@
 <?php
 if (version_compare(JVERSION, "4.0", "<")) {
-	abstract class JRegistryFormat extends \Joomla\Registry\AbstractRegistryFormat
-	{
-	}
 	class JWeb extends \Joomla\CMS\Application\WebApplication
 	{
 	}
-	class JAccessWrapperAccess extends \Joomla\CMS\Access\Wrapper\Access
-	{
-	}
-	abstract class JLanguageStemmer extends \Joomla\CMS\Language\LanguageStemmer
-	{
-	}
-	class JLanguageStemmerPorteren extends \Joomla\CMS\Language\Stemmer\Porteren
-	{
-	}
-	class JLanguageWrapperText extends \Joomla\CMS\Language\Wrapper\JTextWrapper
-	{
-	}
-	class JLanguageWrapperHelper extends \Joomla\CMS\Language\Wrapper\LanguageHelperWrapper
-	{
-	}
-	class JLanguageWrapperTransliterate extends \Joomla\CMS\Language\Wrapper\TransliterateWrapper
-	{
-	}
-	class JHelperContenthistory extends \Joomla\CMS\Helper\ContentHistoryHelper
+	class JWebClient extends \Joomla\Application\Web\WebClient
 	{
 	}
 	class JDocumentRendererAtom extends \Joomla\CMS\Document\Renderer\Feed\AtomRenderer
@@ -48,62 +27,79 @@ if (version_compare(JVERSION, "4.0", "<")) {
 	class JDocumentRendererModules extends \Joomla\CMS\Document\Renderer\Html\ModulesRenderer
 	{
 	}
-	class JFilterWrapperOutput extends \Joomla\CMS\Filter\Wrapper\OutputFilterWrapper
-	{
-	}
-	class JHttpWrapperFactory extends \Joomla\CMS\Http\Wrapper\FactoryWrapper
-	{
-	}
-	class JCacheStorageApc extends \Joomla\CMS\Cache\Storage\ApcStorage
-	{
-	}
-	class JCacheStorageCachelite extends \Joomla\CMS\Cache\Storage\CacheliteStorage
-	{
-	}
-	class JCacheStorageMemcache extends \Joomla\CMS\Cache\Storage\MemcacheStorage
-	{
-	}
-	class JCacheStorageXcache extends \Joomla\CMS\Cache\Storage\XcacheStorage
-	{
-	}
-	class JUserWrapperHelper extends \Joomla\CMS\User\UserWrapper
-	{
-	}
-	class JFormWrapper extends \Joomla\CMS\Form\FormWrapper
-	{
-	}
-	class JMailWrapperHelper extends \Joomla\CMS\Mail\MailWrapper
-	{
-	}
 	class JFTP extends \Joomla\CMS\Client\FtpClient
 	{
 	}
 	class JLDAP extends \Joomla\Ldap\LdapClient
 	{
 	}
-	interface JCryptPassword extends \Joomla\CMS\Crypt\CryptPassword
+	interface JCryptCipher extends \Joomla\CMS\Crypt\CipherInterface
 	{
 	}
-	class JCryptCipherBlowfish extends \Joomla\CMS\Crypt\Cipher\BlowfishCipher
-	{
-	}
-	abstract class JCryptCipherMcrypt extends \Joomla\CMS\Crypt\Cipher\McryptCipher
-	{
-	}
-	class JCryptCipherRijndael256 extends \Joomla\CMS\Crypt\Cipher\Rijndael256Cipher
-	{
-	}
-	class JCryptCipherSimple extends \Joomla\CMS\Crypt\Cipher\SimpleCipher
-	{
-	}
-	class JCryptCipher3Des extends \Joomla\CMS\Crypt\Cipher\TripleDesCipher
-	{
-	}
-	class JCryptPasswordSimple extends \Joomla\CMS\Crypt\Password\SimpleCryptPassword
+	class JCryptKey extends \Joomla\CMS\Crypt\Key
 	{
 	}
 }
 if (version_compare(JVERSION, "5.0", "<")) {
+	class ActionLogPlugin extends \Joomla\Component\Actionlogs\Administrator\Plugin\ActionLogPlugin
+	{
+	}
+	class FieldsPlugin extends \Joomla\Component\Fields\Administrator\Plugin\FieldsPlugin
+	{
+	}
+	class FieldsListPlugin extends \Joomla\Component\Fields\Administrator\Plugin\FieldsListPlugin
+	{
+	}
+	class PrivacyExportDomain extends \Joomla\Component\Privacy\Administrator\Export\Domain
+	{
+	}
+	class PrivacyExportField extends \Joomla\Component\Privacy\Administrator\Export\Field
+	{
+	}
+	class PrivacyExportItem extends \Joomla\Component\Privacy\Administrator\Export\Item
+	{
+	}
+	class PrivacyPlugin extends \Joomla\Component\Privacy\Administrator\Plugin\PrivacyPlugin
+	{
+	}
+	class PrivacyRemovalStatus extends \Joomla\Component\Privacy\Administrator\Removal\Status
+	{
+	}
+	class PrivacyTableRequest extends \Joomla\Component\Privacy\Administrator\Table\RequestTable
+	{
+	}
+	class TagsTableTag extends \Joomla\Component\Tags\Administrator\Table\TagTable
+	{
+	}
+	class ContentHelperRoute extends \Joomla\Component\Content\Site\Helper\RouteHelper
+	{
+	}
+	abstract class FinderIndexerAdapter extends \Joomla\Component\Finder\Administrator\Indexer\Adapter
+	{
+	}
+	class FinderIndexerHelper extends \Joomla\Component\Finder\Administrator\Indexer\Helper
+	{
+	}
+	class FinderIndexer extends \Joomla\Component\Finder\Administrator\Indexer\Indexer
+	{
+	}
+	abstract class FinderIndexerParser extends \Joomla\Component\Finder\Administrator\Indexer\Parser
+	{
+	}
+	class FinderIndexerQuery extends \Joomla\Component\Finder\Administrator\Indexer\Query
+	{
+	}
+	class FinderIndexerResult extends \Joomla\Component\Finder\Administrator\Indexer\Result
+	{
+	}
+	class FinderIndexerTaxonomy extends \Joomla\Component\Finder\Administrator\Indexer\Taxonomy
+	{
+	}
+	class FinderIndexerToken extends \Joomla\Component\Finder\Administrator\Indexer\Token
+	{
+	}
+}
+if (version_compare(JVERSION, "6.0", "<")) {
 	class JRegistry extends \Joomla\Registry\Registry
 	{
 	}
@@ -167,9 +163,7 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JCli extends \Joomla\CMS\Application\CliApplication
 	{
 	}
-	class JWebClient extends \Joomla\Application\Web\WebClient
-	{
-	}
+
 	abstract class JModelAdmin extends \Joomla\CMS\MVC\Model\AdminModel
 	{
 	}
@@ -264,15 +258,6 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	{
 	}
 	class JTableModule extends \Joomla\CMS\Table\Module
-	{
-	}
-	abstract class JTableObserver extends \Joomla\CMS\Table\Observer\AbstractObserver
-	{
-	}
-	class JTableObserverContenthistory extends \Joomla\CMS\Table\Observer\ContentHistory
-	{
-	}
-	class JTableObserverTags extends \Joomla\CMS\Table\Observer\Tags
 	{
 	}
 	class JAccess extends \Joomla\CMS\Access\Access
@@ -380,9 +365,6 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JHelperRoute extends \Joomla\CMS\Helper\RouteHelper
 	{
 	}
-	class JSearchHelper extends \Joomla\CMS\Helper\SearchHelper
-	{
-	}
 	class JHelperTags extends \Joomla\CMS\Helper\TagsHelper
 	{
 	}
@@ -483,9 +465,6 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	{
 	}
 	class JToolbarButtonSeparator extends \Joomla\CMS\Toolbar\Button\SeparatorButton
-	{
-	}
-	class JToolbarButtonSlider extends \Joomla\CMS\Toolbar\Button\SliderButton
 	{
 	}
 	class JToolbarButtonStandard extends \Joomla\CMS\Toolbar\Button\StandardButton
@@ -794,9 +773,6 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JSession extends \Joomla\CMS\Session\Session
 	{
 	}
-	class JSessionExceptionUnsupported extends \Joomla\CMS\Session\Exception\UnsupportedStorageException
-	{
-	}
 	class JUser extends \Joomla\CMS\User\User
 	{
 	}
@@ -815,13 +791,46 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JFormRule extends \Joomla\CMS\Form\FormRule
 	{
 	}
+	class JFormFieldAccessLevel extends \Joomla\CMS\Form\Field\AccesslevelField
+	{
+	}
+	class JFormFieldAliastag extends \Joomla\CMS\Form\Field\AliastagField
+	{
+	}
 	class JFormFieldAuthor extends \Joomla\CMS\Form\Field\AuthorField
+	{
+	}
+	class JFormFieldCacheHandler extends \Joomla\CMS\Form\Field\CachehandlerField
+	{
+	}
+	class JFormFieldCalendar extends \Joomla\CMS\Form\Field\CalendarField
 	{
 	}
 	class JFormFieldCaptcha extends \Joomla\CMS\Form\Field\CaptchaField
 	{
 	}
+	class JFormFieldCategory extends \Joomla\CMS\Form\Field\CategoryField
+	{
+	}
+	class JFormFieldCheckbox extends \Joomla\CMS\Form\Field\CheckboxField
+	{
+	}
+	class JFormFieldCheckboxes extends \Joomla\CMS\Form\Field\CheckboxesField
+	{
+	}
 	class JFormFieldChromeStyle extends \Joomla\CMS\Form\Field\ChromestyleField
+	{
+	}
+	class JFormFieldColor extends \Joomla\CMS\Form\Field\ColorField
+	{
+	}
+	class JFormFieldCombo extends \Joomla\CMS\Form\Field\ComboField
+	{
+	}
+	class JFormFieldComponentlayout extends \Joomla\CMS\Form\Field\ComponentlayoutField
+	{
+	}
+	class JFormFieldComponents extends \Joomla\CMS\Form\Field\ComponentsField
 	{
 	}
 	class JFormFieldContenthistory extends \Joomla\CMS\Form\Field\ContenthistoryField
@@ -833,22 +842,49 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JFormFieldContenttype extends \Joomla\CMS\Form\Field\ContenttypeField
 	{
 	}
+	class JFormFieldDatabaseConnection extends \Joomla\CMS\Form\Field\DatabaseconnectionField
+	{
+	}
 	class JFormFieldEditor extends \Joomla\CMS\Form\Field\EditorField
+	{
+	}
+	class JFormFieldEMail extends \Joomla\CMS\Form\Field\EmailField
+	{
+	}
+	class JFormFieldFile extends \Joomla\CMS\Form\Field\FileField
+	{
+	}
+	class JFormFieldFileList extends \Joomla\CMS\Form\Field\FilelistField
 	{
 	}
 	class JFormFieldFrontend_Language extends \Joomla\CMS\Form\Field\FrontendlanguageField
 	{
 	}
+	class JFormFieldGroupedList extends \Joomla\CMS\Form\Field\GroupedlistField
+	{
+	}
 	class JFormFieldHeadertag extends \Joomla\CMS\Form\Field\HeadertagField
 	{
 	}
-	class JFormFieldHelpsite extends \Joomla\CMS\Form\Field\HelpsiteField
+	class JFormFieldHidden extends \Joomla\CMS\Form\Field\HiddenField
+	{
+	}
+	class JFormFieldImageList extends \Joomla\CMS\Form\Field\ImagelistField
+	{
+	}
+	class JFormFieldInteger extends \Joomla\CMS\Form\Field\IntegerField
+	{
+	}
+	class JFormFieldLanguage extends \Joomla\CMS\Form\Field\LanguageField
 	{
 	}
 	class JFormFieldLastvisitDateRange extends \Joomla\CMS\Form\Field\LastvisitdaterangeField
 	{
 	}
 	class JFormFieldLimitbox extends \Joomla\CMS\Form\Field\LimitboxField
+	{
+	}
+	class JFormFieldList extends \Joomla\CMS\Form\Field\ListField
 	{
 	}
 	class JFormFieldMedia extends \Joomla\CMS\Form\Field\MediaField
@@ -860,6 +896,12 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JFormFieldMenuitem extends \Joomla\CMS\Form\Field\MenuitemField
 	{
 	}
+	class JFormFieldMeter extends \Joomla\CMS\Form\Field\MeterField
+	{
+	}
+	class JFormFieldModulelayout extends \Joomla\CMS\Form\Field\ModulelayoutField
+	{
+	}
 	class JFormFieldModuleOrder extends \Joomla\CMS\Form\Field\ModuleorderField
 	{
 	}
@@ -869,10 +911,31 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JFormFieldModuletag extends \Joomla\CMS\Form\Field\ModuletagField
 	{
 	}
+	class JFormFieldNote extends \Joomla\CMS\Form\Field\NoteField
+	{
+	}
+	class JFormFieldNumber extends \Joomla\CMS\Form\Field\NumberField
+	{
+	}
 	class JFormFieldOrdering extends \Joomla\CMS\Form\Field\OrderingField
 	{
 	}
+	class JFormFieldPassword extends \Joomla\CMS\Form\Field\PasswordField
+	{
+	}
+	class JFormFieldPlugins extends \Joomla\CMS\Form\Field\PluginsField
+	{
+	}
 	class JFormFieldPlugin_Status extends \Joomla\CMS\Form\Field\PluginstatusField
+	{
+	}
+	class JFormFieldPredefinedList extends \Joomla\CMS\Form\Field\PredefinedlistField
+	{
+	}
+	class JFormFieldRadio extends \Joomla\CMS\Form\Field\RadioField
+	{
+	}
+	class JFormFieldRange extends \Joomla\CMS\Form\Field\RangeField
 	{
 	}
 	class JFormFieldRedirect_Status extends \Joomla\CMS\Form\Field\RedirectStatusField
@@ -881,13 +944,43 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JFormFieldRegistrationDateRange extends \Joomla\CMS\Form\Field\RegistrationdaterangeField
 	{
 	}
+	class JFormFieldRules extends \Joomla\CMS\Form\Field\RulesField
+	{
+	}
+	class JFormFieldSessionHandler extends \Joomla\CMS\Form\Field\SessionhandlerField
+	{
+	}
+	class JFormFieldSpacer extends \Joomla\CMS\Form\Field\SpacerField
+	{
+	}
+	class JFormFieldSQL extends \Joomla\CMS\Form\Field\SqlField
+	{
+	}
 	class JFormFieldStatus extends \Joomla\CMS\Form\Field\StatusField
+	{
+	}
+	class JFormFieldSubform extends \Joomla\CMS\Form\Field\SubformField
 	{
 	}
 	class JFormFieldTag extends \Joomla\CMS\Form\Field\TagField
 	{
 	}
+	class JFormFieldTel extends \Joomla\CMS\Form\Field\TelephoneField
+	{
+	}
 	class JFormFieldTemplatestyle extends \Joomla\CMS\Form\Field\TemplatestyleField
+	{
+	}
+	class JFormFieldText extends \Joomla\CMS\Form\Field\TextField
+	{
+	}
+	class JFormFieldTextarea extends \Joomla\CMS\Form\Field\TextareaField
+	{
+	}
+	class JFormFieldTimezone extends \Joomla\CMS\Form\Field\TimezoneField
+	{
+	}
+	class JFormFieldUrl extends \Joomla\CMS\Form\Field\UrlField
 	{
 	}
 	class JFormFieldUserActive extends \Joomla\CMS\Form\Field\UseractiveField
@@ -947,6 +1040,105 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JMicrodata extends \Joomla\CMS\Microdata\Microdata
 	{
 	}
+	abstract class JDatabaseDriver extends \Joomla\Database\DatabaseDriver
+	{
+	}
+	abstract class JDatabaseExporter extends \Joomla\Database\DatabaseExporter
+	{
+	}
+	class JDatabaseFactory extends \Joomla\Database\DatabaseFactory
+	{
+	}
+	abstract class JDatabaseImporter extends \Joomla\Database\DatabaseImporter
+	{
+	}
+	interface JDatabaseInterface extends \Joomla\Database\DatabaseInterface
+	{
+	}
+	class JDatabaseIterator extends \Joomla\Database\DatabaseIterator
+	{
+	}
+	abstract class JDatabaseQuery extends \Joomla\Database\DatabaseQuery
+	{
+	}
+	class JDatabaseDriverMysqli extends \Joomla\Database\Mysqli\MysqliDriver
+	{
+	}
+	abstract class JDatabaseDriverPdo extends \Joomla\Database\Pdo\PdoDriver
+	{
+	}
+	class JDatabaseDriverPdomysql extends \Joomla\Database\Mysql\MysqlDriver
+	{
+	}
+	class JDatabaseDriverPgsql extends \Joomla\Database\Pgsql\PgsqlDriver
+	{
+	}
+	class JDatabaseDriverSqlazure extends \Joomla\Database\Sqlazure\SqlazureDriver
+	{
+	}
+	class JDatabaseDriverSqlite extends \Joomla\Database\Sqlite\SqliteDriver
+	{
+	}
+	class JDatabaseDriverSqlsrv extends \Joomla\Database\Sqlsrv\SqlsrvDriver
+	{
+	}
+	class JDatabaseExceptionConnecting extends \Joomla\Database\Exception\ConnectionFailureException
+	{
+	}
+	class JDatabaseExceptionExecuting extends \Joomla\Database\Exception\ExecutionFailureException
+	{
+	}
+	class JDatabaseExceptionUnsupported extends \Joomla\Database\Exception\UnsupportedAdapterException
+	{
+	}
+	class JDatabaseExporterMysqli extends \Joomla\Database\Mysqli\MysqliExporter
+	{
+	}
+	class JDatabaseExporterPdomysql extends \Joomla\Database\Mysql\MysqlExporter
+	{
+	}
+	class JDatabaseExporterPgsql extends \Joomla\Database\Pgsql\PgsqlExporter
+	{
+	}
+	class JDatabaseImporterMysqli extends \Joomla\Database\Mysqli\MysqliImporter
+	{
+	}
+	class JDatabaseImporterPdomysql extends \Joomla\Database\Mysql\MysqlImporter
+	{
+	}
+	class JDatabaseImporterPgsql extends \Joomla\Database\Pgsql\PgsqlImporter
+	{
+	}
+	class JDatabaseQueryElement extends \Joomla\Database\Query\QueryElement
+	{
+	}
+	interface JDatabaseQueryLimitable extends \Joomla\Database\Query\LimitableInterface
+	{
+	}
+	interface JDatabaseQueryPreparable extends \Joomla\Database\Query\PreparableInterface
+	{
+	}
+	class JDatabaseQueryMysqli extends \Joomla\Database\Mysqli\MysqliQuery
+	{
+	}
+	abstract class JDatabaseQueryPdo extends \Joomla\Database\Pdo\PdoQuery
+	{
+	}
+	class JDatabaseQueryPdomysql extends \Joomla\Database\Mysql\MysqlQuery
+	{
+	}
+	class JDatabaseQueryPgsql extends \Joomla\Database\Pgsql\PgsqlQuery
+	{
+	}
+	class JDatabaseQuerySqlazure extends \Joomla\Database\Sqlazure\SqlazureQuery
+	{
+	}
+	class JDatabaseQuerySqlite extends \Joomla\Database\Sqlite\SqliteQuery
+	{
+	}
+	class JDatabaseQuerySqlsrv extends \Joomla\Database\Sqlsrv\SqlsrvQuery
+	{
+	}
 	abstract class JFactory extends \Joomla\CMS\Factory
 	{
 	}
@@ -957,9 +1149,6 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	{
 	}
 	class JClientHelper extends \Joomla\CMS\Client\ClientHelper
-	{
-	}
-	class JClientWrapperHelper extends \Joomla\CMS\Client\ClientWrapper
 	{
 	}
 	class JClientFtp extends \Joomla\CMS\Client\FtpClient
@@ -986,16 +1175,13 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JCrypt extends \Joomla\CMS\Crypt\Crypt
 	{
 	}
-	interface JCryptCipher extends \Joomla\CMS\Crypt\CipherInterface
+	interface JCryptCipher extends \Joomla\Crypt\CipherInterface
 	{
 	}
-	class JCryptKey extends \Joomla\CMS\Crypt\Key
+	class JCryptKey extends \Joomla\Crypt\Key
 	{
 	}
 	class JCryptCipherCrypto extends \Joomla\CMS\Crypt\Cipher\CryptoCipher
-	{
-	}
-	class JCryptCipherSodium extends \Joomla\CMS\Crypt\Cipher\SodiumCipher
 	{
 	}
 	abstract class JStringPunycode extends \Joomla\CMS\String\PunycodeHelper
@@ -1061,28 +1247,25 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	abstract class JImageFilter extends \Joomla\CMS\Image\ImageFilter
 	{
 	}
-	class JImageFilterBackgroundfill extends \Joomla\Image\Filter\Backgroundfill
+	class JImageFilterBackgroundfill extends \Joomla\CMS\Image\Filter\Backgroundfill
 	{
 	}
-	class JImageFilterBrightness extends \Joomla\Image\Filter\Brightness
+	class JImageFilterBrightness extends \Joomla\CMS\Image\Filter\Brightness
 	{
 	}
-	class JImageFilterContrast extends \Joomla\Image\Filter\Contrast
+	class JImageFilterContrast extends \Joomla\CMS\Image\Filter\Contrast
 	{
 	}
-	class JImageFilterEdgedetect extends \Joomla\Image\Filter\Edgedetect
+	class JImageFilterEdgedetect extends \Joomla\CMS\Image\Filter\Edgedetect
 	{
 	}
-	class JImageFilterEmboss extends \Joomla\Image\Filter\Emboss
+	class JImageFilterEmboss extends \Joomla\CMS\Image\Filter\Emboss
 	{
 	}
-	class JImageFilterNegate extends \Joomla\Image\Filter\Negate
+	class JImageFilterNegate extends \Joomla\CMS\Image\Filter\Negate
 	{
 	}
-	class JImageFilterSketchy extends \Joomla\Image\Filter\Sketchy
-	{
-	}
-	class JImageFilterSmooth extends \Joomla\Image\Filter\Smooth
+	class JImageFilterSmooth extends \Joomla\CMS\Image\Filter\Smooth
 	{
 	}
 	class JObject extends \Joomla\CMS\Object\CMSObject
@@ -1118,19 +1301,110 @@ if (version_compare(JVERSION, "5.0", "<")) {
 	class JStringController extends \Joomla\CMS\Filesystem\Support\StringController
 	{
 	}
-	class JFilesystemWrapperFile extends \Joomla\CMS\Filesystem\Wrapper\FileWrapper
+	class JClassLoader extends \Joomla\CMS\Autoload\ClassLoader
 	{
 	}
-	class JFilesystemWrapperFolder extends \Joomla\CMS\Filesystem\Wrapper\FolderWrapper
-	{
-	}
-	class JFilesystemWrapperPath extends \Joomla\CMS\Filesystem\Wrapper\PathWrapper
+	class JFormFilterInt_Array extends \Joomla\CMS\Form\Filter\IntarrayFilter
 	{
 	}
 	class JAdapter extends \Joomla\CMS\Adapter\Adapter
 	{
 	}
 	class JAdapterInstance extends \Joomla\CMS\Adapter\AdapterInstance
+	{
+	}
+	class JHtmlAccess extends \Joomla\CMS\HTML\Helpers\Access
+	{
+	}
+	class JHtmlActionsDropdown extends \Joomla\CMS\HTML\Helpers\ActionsDropdown
+	{
+	}
+	class JHtmlAdminLanguage extends \Joomla\CMS\HTML\Helpers\AdminLanguage
+	{
+	}
+	class JHtmlBehavior extends \Joomla\CMS\HTML\Helpers\Behavior
+	{
+	}
+	class JHtmlBootstrap extends \Joomla\CMS\HTML\Helpers\Bootstrap
+	{
+	}
+
+	class JHtmlCategory extends \Joomla\CMS\HTML\Helpers\Category
+	{
+	}
+	class JHtmlContent extends \Joomla\CMS\HTML\Helpers\Content
+	{
+	}
+	class JHtmlContentlanguage extends \Joomla\CMS\HTML\Helpers\ContentLanguage
+	{
+	}
+	class JHtmlDate extends \Joomla\CMS\HTML\Helpers\Date
+	{
+	}
+	class JHtmlDebug extends \Joomla\CMS\HTML\Helpers\Debug
+	{
+	}
+	class JHtmlDraggablelist extends \Joomla\CMS\HTML\Helpers\DraggableList
+	{
+	}
+	class JHtmlDropdown extends \Joomla\CMS\HTML\Helpers\Dropdown
+	{
+	}
+	class JHtmlEmail extends \Joomla\CMS\HTML\Helpers\Email
+	{
+	}
+	class JHtmlForm extends \Joomla\CMS\HTML\Helpers\Form
+	{
+	}
+	class JHtmlFormbehavior extends \Joomla\CMS\HTML\Helpers\FormBehavior
+	{
+	}
+	class JHtmlGrid extends \Joomla\CMS\HTML\Helpers\Grid
+	{
+	}
+	class JHtmlIcons extends \Joomla\CMS\HTML\Helpers\Icons
+	{
+	}
+	class JHtmlJGrid extends \Joomla\CMS\HTML\Helpers\JGrid
+	{
+	}
+	class JHtmlJquery extends \Joomla\CMS\HTML\Helpers\Jquery
+	{
+	}
+	class JHtmlLinks extends \Joomla\CMS\HTML\Helpers\Links
+	{
+	}
+	class JHtmlList extends \Joomla\CMS\HTML\Helpers\ListHelper
+	{
+	}
+	class JHtmlMenu extends \Joomla\CMS\HTML\Helpers\Menu
+	{
+	}
+	class JHtmlNumber extends \Joomla\CMS\HTML\Helpers\Number
+	{
+	}
+	class JHtmlSearchtools extends \Joomla\CMS\HTML\Helpers\SearchTools
+	{
+	}
+	class JHtmlSelect extends \Joomla\CMS\HTML\Helpers\Select
+	{
+	}
+	class JHtmlSidebar extends \Joomla\CMS\HTML\Helpers\Sidebar
+	{
+	}
+	class JHtmlSortableList extends \Joomla\CMS\HTML\Helpers\SortableList
+	{
+	}
+	class JHtmlString extends \Joomla\CMS\HTML\Helpers\StringHelper
+	{
+	}
+	class JHtmlTag extends \Joomla\CMS\HTML\Helpers\Tag
+	{
+	}
+	class JHtmlTel extends \Joomla\CMS\HTML\Helpers\Telephone
+	{
+	}
+	class JHtmlUser extends \Joomla\CMS\HTML\Helpers\User
 	{
 	}
 }
