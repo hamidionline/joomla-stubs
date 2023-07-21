@@ -6,7 +6,7 @@ if (version_compare(JVERSION, "4.0", "<")) {
 	class JWebClient extends \Joomla\Application\Web\WebClient
 	{
 	}
-	class JDocumentRendererAtom extends \Joomla\CMS\Document\Renderer\Feed\AtomRenderer
+	abstract class JDocumentRendererAtom extends \Joomla\CMS\Document\Renderer\Feed\AtomRenderer
 	{
 	}
 	class JDocumentRendererRSS extends \Joomla\CMS\Document\Renderer\Feed\RssRenderer
@@ -139,28 +139,28 @@ if (version_compare(JVERSION, "6.0", "<")) {
 	abstract class JApplicationBase extends \Joomla\CMS\Application\BaseApplication
 	{
 	}
-	class JApplicationCli extends \Joomla\CMS\Application\CliApplication
+	abstract class JApplicationCli extends \Joomla\CMS\Application\CliApplication
 	{
 	}
-	class JApplicationCms extends \Joomla\CMS\Application\CMSApplication
+	abstract class JApplicationCms extends \Joomla\CMS\Application\CMSApplication
 	{
 	}
-	class JApplicationDaemon extends \Joomla\CMS\Application\DaemonApplication
+	abstract class JApplicationDaemon extends \Joomla\CMS\Application\DaemonApplication
 	{
 	}
 	class JApplicationSite extends \Joomla\CMS\Application\SiteApplication
 	{
 	}
-	class JApplicationWeb extends \Joomla\CMS\Application\WebApplication
+	abstract class JApplicationWeb extends \Joomla\CMS\Application\WebApplication
 	{
 	}
 	class JApplicationWebClient extends \Joomla\Application\Web\WebClient
 	{
 	}
-	class JDaemon extends \Joomla\CMS\Application\DaemonApplication
+	abstract class JDaemon extends \Joomla\CMS\Application\DaemonApplication
 	{
 	}
-	class JCli extends \Joomla\CMS\Application\CliApplication
+	abstract class JCli extends \Joomla\CMS\Application\CliApplication
 	{
 	}
 
@@ -392,7 +392,7 @@ if (version_compare(JVERSION, "6.0", "<")) {
 	abstract class JPluginHelper extends \Joomla\CMS\Plugin\PluginHelper
 	{
 	}
-	class JMenu extends \Joomla\CMS\Menu\AbstractMenu
+	abstract class JMenu extends \Joomla\CMS\Menu\AbstractMenu
 	{
 	}
 	class JMenuAdministrator extends \Joomla\CMS\Menu\AdministratorMenu
